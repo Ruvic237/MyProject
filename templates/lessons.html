@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %} Lessons  Page {% endblock %}
+{% block content %}
+
+    <!-- Detail of subjects lessons in GCA A section-->
+    <div style="display: flex; justify-content: space-around; margin-top: 158px; margin-bottom: 120px">
+
+    <!-- Iterating through lessons of a subject with related name relate -->
+    {% for lesson in lessons.relate.all%}
+
+
+           <!-- Characteristics of lesson display in a card -->
+           <div style="width: 310px" class="card-group">
+              <div class="card">
+
+
+                 <a href="{% url 'per' subject=lessons.slug slug=lesson.slug %}">
+                     <img style="width: 310px; height: 130px" src="{{ lesson.lesson_image.url }}" class="card-img-top" alt="...">
+                 </a>
+
+                  <div class="card-body">
+                          <h5 style="text-align: center" class="card-title">{{ lesson.lesson_name }}</h5>
+                  </div>
+
+                  <div class="card-footer">
+                      <small class="text-muted">Created on {{ lesson.date_creation }}</small>
+                  </div>
+
+
+              </div>
+           </div>
+           <!-- End of Characteristics of lesson display in a card -->
+
+
+    {% endfor %}
+    </div>
+    <!-- End of Detail of subjects lessons in GCA A section-->
+
+{% endblock %}
+

@@ -1,0 +1,282 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Home Page {% endblock %}
+{% block content %}
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img style="height: 80vh" class="img-fluid" src="{% static 'img/art.png' %}" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome <span style="font-size: 30px;color:black">"{{ request.user }}"</span> To The Best Online Courses</h5>
+                                <h1 class="display-3 text-white animated slideInDown">Get Educated Online From Your Home</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+
+
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-item bg-light">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+
+                            <i class="fa fa-3x fa-graduation-cap text-black mb-4"></i>
+                            <h5 class="mb-3">Professional Teachers</h5>
+                            <p>The Platform Recruits Experienced Teachers Who are Available To Help You </p>
+
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item bg-light">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-globe text-black mb-4"></i>
+                            <h5 class="mb-3">Video Courses</h5>
+                            <p>The platform proposes A variety of detailed Solutions at your disposal </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item bg-light">
+                        <div class="service-item text-center pt-3">
+
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-home text-black mb-4"></i>
+                                <h5 class="mb-3">Sample Questions</h5>
+                                <p>Different Sample of Examinations Questions To Keep you on track</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item bg-light">
+                        <div class="service-item text-center pt-3">
+
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-book-open text-black mb-4"></i>
+                                <h5 class="mb-3">Chatting</h5>
+                                <p>An online Chatting Section to permit you remain in touch with friends</p>
+                            </div>
+
+                        </div>
+                     </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- About section picture -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="{% static 'img/cat-3.jpg' %}" alt="" style="object-fit: cover;">
+                    </div>
+                </div>
+                <!-- End of picture-->
+
+
+                <!-- About section content-->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+
+
+                    <h6 class="section-title bg-white text-start text-black pe-3">About Us</h6>
+                    <h2 style="color: black" class="mb-4">Welcome to Ruvic's Learn</h2>
+                    <p class="mb-4">Our Main Objective is to provide you with useful Resources we think will help you across you Educational Journey And much more smile! </p>
+                    <p class="mb-4">Prepare your selves in order to get armed and ready to fight and win the war of the GCE A Level Examinations!! Stay in touch and Let's build this Awesome Journey together </p>
+
+
+                    <div class="row gy-2 gx-4 mb-4">
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-black me-2"></i>Skilled Instructors</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-black me-2"></i>Online Classes</p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <!-- End of About section content -->
+
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+
+            <!-- Team heading -->
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h2 class="mb-5">Expert Instructors</h2>
+            </div>
+
+            <!-- Teachers  section -->
+            <div class="row g-4">
+
+                <!-- First teacher section -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+
+
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/team-3.jpg' %}" alt="">
+                        </div>
+
+
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a style="background-color: black" class="btn btn-sm-square btn-black mx-1" href=""><i style="color: white" class="fab fa-facebook-f"></i></a>
+                                <a style="background-color: black" class="btn btn-sm-square btn-black mx-1" href=""><i style="color: white" class="fab fa-twitter"></i></a>
+                                <a style="background-color: black" class="btn btn-sm-square btn-black mx-1" href=""><i style="color: white" class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Professor Ruvic</h5>
+                            <small>Phd.Chemist</small>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- End of First teacher section -->
+
+
+                <!-- 2 teacher section -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item bg-light">
+
+
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/team-2.jpg' %}" alt="">
+                        </div>
+
+
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <br>
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a style="background-color: black" class="btn btn-sm-square btn-black mx-1" href=""><i style="color: white" class="fab fa-facebook-f"></i></a>
+                                <a style="background-color: black" class="btn btn-sm-square btn-black mx-1" href=""><i style="color: white" class="fab fa-twitter"></i></a>
+                                <a style="background-color: black" class="btn btn-sm-square btn-black mx-1" href=""><i style="color: white" class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Madame Alexa</h5>
+                            <small>Phd.ComputerSc</small>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- End of 2 teacher section -->
+
+
+                <!-- 3 teacher section -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item bg-light">
+
+
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/team-1.jpg' %}" alt="">
+                        </div>
+
+
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a style="background-color: black" class="btn btn-sm-square btn-black mx-1" href=""><i style="color: white" class="fab fa-facebook-f"></i></a>
+                                <a style="background-color: black" class="btn btn-sm-square btn-black mx-1" href=""><i style="color: white" class="fab fa-twitter"></i></a>
+                                <a style="background-color: black" class="btn btn-sm-square btn-black mx-1" href=""><i style="color: white" class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Professor Ghost</h5>
+                            <small>Phd.Math</small>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- End of 3 teacher section -->
+
+
+                <!-- 4 teacher section -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item bg-light">
+
+
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/team-4.jpg' %}" alt="">
+                        </div>
+
+
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a style="background-color: black" class="btn btn-sm-square btn-black mx-1" href=""><i style="color: white" class="fab fa-facebook-f"></i></a>
+                                <a style="background-color: black" class="btn btn-sm-square btn-black mx-1" href=""><i style="color: white" class="fab fa-twitter"></i></a>
+                                <a style="background-color: black" class="btn btn-sm-square btn-black mx-1" href=""><i style="color: white" class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Professor Alice</h5>
+                            <small>Phd.Pysics</small>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- End of 4 teacher section -->
+
+            </div>
+            <!-- End of Teachers  section -->
+
+
+        </div>
+    </div>
+    <!-- Team End -->
+{% endblock %}

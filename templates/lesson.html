@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block title %} Lessons  Page {% endblock %}
+{% block content %}
+
+    <!-- Lesson video section -->
+    <div style="display: flex;justify-content: space-around;margin-top: 10px">
+
+        <video  controls="controls"  style="width: 700px; height: 500px;">
+            <source src="{{ lesson.video.url }}" type="video/mp4">
+        </video>
+
+    </div>
+    <!-- End of Lesson video section -->
+
+
+    <!-- Comment heading section -->
+    <h4 style="margin-top: 30px; margin-left: 10px"> Post your comment Below</h4>
+
+
+    <!-- Comment form in all lesson section -->
+    <form method="post">
+    {% csrf_token %}
+        <div style="width: 700px; margin-left: 10px" class="form-group">
+            {{ form.as_p }}
+            <input style="color: white; font-size: 20px" type="submit" name="form" value="Comment" class="btn btn-primary btn-sm">
+        </div>
+    </form>
+    <!-- End of comment section -->
+
+
+    <!-- Comment and responses display on template -->
+    <div style="margin-left: 10px;margin-top: 15px;margin-bottom: 15px; width: 600px">
+
+        <!-- Iterating through all comments of each lesson with related name comm -->
+        {% for comment in lesson.comm.all %}
+
+
+            <h4><small style="color: saddlebrown">{{ comment.author }}</small> <small><i>Posted on {{comment.comment_date}}</i></small></h4>
+            <h5 style="margin-left: 10px; font-style: italic">{{ comment.body }}</h5>
+
+
+            <!-- Iterating through all Answers of comments of each lesson with related name resp-->
+            {% for ans in comment.resp.all %}
+                <h5 style="margin-left: 20px"><small style="color: brown">{{ ans.author }}</small> <small><i>Answered on {{ans.response_date}}</i></small></h5>
+                <h4 style="margin-left: 30px; font-style: italic"> {{ ans.body }}</h4>
+            {% endfor %}
+
+
+            <!-- Response form in all lesson section-->
+            <form method="post">
+                {% csrf_token %}
+                <div style="width: 500px; margin-left: 10px" class="form-group">
+                <input type="hidden" name="comment.id" value="{{ comment.id }}">
+                {{ form2.as_p }}
+                <input type="submit" name="form2" value="Answer" class="btn btn-warning btn-sm">
+                </div>
+            </form>
+            <!-- End of Response form section -->
+
+
+    {% endfor %}
+    </div>
+    <!-- End of Comment and responses display on template -->
+
+
+{% endblock %}
+

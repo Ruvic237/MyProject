@@ -1,0 +1,80 @@
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white sticky-top">
+            <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+                <h2 class="m-0 text-black">:: Ruv's E-Learn</h2>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <!-- Parent Div Start -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+
+                    <!-- Nav sub Parent Start -->
+                    <div id="go" class="navbar-nav ms-auto p-4 p-lg-0">
+
+                                <!-- Checking if home is active or not -->
+                                {% if '/Home/' == request.path %}
+                                    <a href="{% url 'home' %}" class="nav-item nav-link " style="color: white; background-color: black" >HOME</a>
+                                {% else %}
+                                    <a href="{% url 'home' %}" class="nav-item nav-link " style="color: black" >HOME</a>
+                                {% endif %}
+
+
+                                <!-- Checking if about page is active or not -->
+                                {% if '/Home/about' == request.path %}
+                                    <a href="{% url 'about' %}" class="nav-item nav-link" style="color: white; background-color: black">ABOUT</a>
+                                {% else %}
+                                    <a href="{% url 'about' %}" class="nav-item nav-link " style="color: black">ABOUT</a>
+                                {% endif %}
+
+
+
+                                <!-- Drop down menu starts Start -->
+                                <div class="nav-item dropdown ">
+
+                                    <!-- Checking if contact page is active or not -->
+                                    {% if '/Home/courseA' == request.path %}
+                                        <a href="{% url 'courseA'%}" class="nav-link dropdown-toggle " style="color: white; background-color: black" data-bs-toggle="dropdown">COURSES</a>
+                                    {% else %}
+                                        <a href="{% url 'courseA'%}" class="nav-link dropdown-toggle " style="color: black" data-bs-toggle="dropdown">COURSES</a>
+                                    {% endif %}
+
+                                    <div style="background-color: white;" class="dropdown-menu fade-down m-0 text-bg-white p-3">
+                                        <a href="{% url 'courseA'%}" class="dropdown-item " style="color: black">GCE A-Level</a>
+                                        <hr>
+                                    </div>
+
+                                </div>
+                                <!-- Dropdown Ends -->
+
+
+                               <!-- Checking if contact page is active or not -->
+                               {% if '/Home/contact' == request.path %}
+                                     <a href="{% url 'contact' %}" class="nav-item nav-link " style="color: white; background-color: black">CONTACT US</a>
+                               {% else %}
+                                     <a href="{% url 'contact' %}" class="nav-item nav-link " style="color: black">CONTACT US</a>
+                                {% endif %}
+
+
+                                  <!-- Checking if user is authenticated -->
+                                  {% if user.is_authenticated %}
+
+                                      <!-- Logout section -->
+                                      <li class="nav-item mr-3">
+                                                    <a style="color: black" class="nav-link" href="{% url 'login' %}">
+                                                     <i class="fas fa-sign-in-alt " ></i> Logout</a>
+                                      </li>
+
+
+                                  {% endif %}
+                                  <!-- End of authentication -->
+
+                    </div>
+            </div>
+
+            <!-- Parent Div Ends -->
+    </nav>
+    <!-- Navbar End -->

@@ -1,0 +1,34 @@
+{% extends 'basi.html' %}
+{% load bootstrap5 %}
+{% block title %}
+    Sign Up Page
+{% endblock %}
+{% block content %}
+    <section id="register" class="py-5">
+    <div class="p-3 mb-2  text-white">
+            <div class="container" >
+                <div class="row my-md-4" style="justify-content: center; align-items:center ">
+                    <div class="col-md-6 p-3 mb-2  text-dark border border-primary border-2">
+                        <h6>SignUp To Join Our E-Learning Community</h6>
+                        <hr>
+                        <form method="post" class="form ">
+                             {% csrf_token %}
+                             {% bootstrap_form form %}
+
+                            <div class="row g-3">
+                                  <div class="col-sm">
+                                      <button type="submit" class="btn btn-primary form-control">SignUp</button>
+                                  </div>
+                                  <div class="col-sm-7">
+                                      <p style="color: white" class=" bg-primary form-control col-sm"> Already Have an Account? <a href=" {% url 'login' %} " style="text-decoration: none; color: white">Login</a></p>
+                                  </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+
+
+{% endblock %}
